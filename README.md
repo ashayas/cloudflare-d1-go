@@ -4,3 +4,4 @@
 
 ## Testing 
 - Run `go test` to run the tests
+- You can use the `-v` flag to see more verbose test results
