@@ -11,6 +11,11 @@ type Client struct {
 }
 
 func NewClient(accountID, apiToken string) *Client {
+	// Return nil if either accountID or apiToken is empty
+	if accountID == "" || apiToken == "" {
+		return nil
+	}
+
 	return &Client{
 		AccountID:  accountID,
 		APIToken:   apiToken,
