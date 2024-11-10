@@ -1,7 +1,9 @@
-package cloudflared1
+package cloudflared1_test
 
 import (
 	"testing"
+
+	client "github.com/ashayas/cloudflare-d1-go/client"
 )
 
 func TestNewClient(t *testing.T) {
@@ -33,7 +35,7 @@ func TestNewClient(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			client := NewClient(tt.accountID, tt.apiToken)
+			client := client.NewClient(tt.accountID, tt.apiToken)
 
 			if tt.wantErr {
 				if client != nil {
