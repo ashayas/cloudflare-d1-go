@@ -1,4 +1,20 @@
 # Cloudflare D1 Go Client ☁️ 
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/ashayas/cloudflare-d1-go/main/.github/assets/gopher.png" alt="Cloudflare D1 Go"/>
+</p>
+
+<p align="center">
+<a href="https://twitter.com/ashayas/">🐦 Twitter</a>
+</p>
+
+<p align="center">
+<a href="https://pkg.go.dev/github.com/ashayas/cloudflare-d1-go"><img src="https://pkg.go.dev/badge/github.com/ashayas/cloudflare-d1-go.svg" alt="Go Reference"></a>
+<a href="https://goreportcard.com/report/github.com/ashayas/cloudflare-d1-go"><img src="https://goreportcard.com/badge/github.com/ashayas/cloudflare-d1-go" alt="Go Report Card"></a>
+<img src="https://img.shields.io/github/go-mod/go-version/ashayas/cloudflare-d1-go" alt="Go Version">
+<img src="https://img.shields.io/github/license/ashayas/cloudflare-d1-go" alt="License">
+</p>
+
 - This is a lightweight Go client for the Cloudflare D1 database
 - D1 is a cool serverless, zero-config, transactional SQL database built by [Cloudflare](https://www.cloudflare.com/) built for the edge and cost-effective
 
