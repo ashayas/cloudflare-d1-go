@@ -1,7 +1,7 @@
 # Cloudflare D1 Go Client ☁️ 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ashayas/cloudflare-d1-go/main/.github/assets/gopher.png" alt="Cloudflare D1 Go"/>
+<img src="https://raw.githubusercontent.com/ashayas/cloudflare-d1-go/refs/heads/master/.github/assets/gopher.png" width="250" alt="Cloudflare D1 Go"/>
 </p>
 
 <p align="center">
