@@ -12,7 +12,7 @@
 <a href="https://pkg.go.dev/github.com/ashayas/cloudflare-d1-go"><img src="https://pkg.go.dev/badge/github.com/ashayas/cloudflare-d1-go.svg" alt="Go Reference"></a>
 <a href="https://goreportcard.com/report/github.com/ashayas/cloudflare-d1-go"><img src="https://goreportcard.com/badge/github.com/ashayas/cloudflare-d1-go" alt="Go Report Card"></a>
 <img src="https://img.shields.io/github/go-mod/go-version/ashayas/cloudflare-d1-go" alt="Go Version">
-<img src="https://img.shields.io/github/license/ashayas/cloudflare-d1-go" alt="License">
+<img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
 </p>
 
 - This is a lightweight Go client for the Cloudflare D1 database
