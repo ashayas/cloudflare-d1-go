@@ -1,6 +1,7 @@
 package cloudflared1
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -126,4 +127,33 @@ func (c *Client) RemoveTable(tableName string) (*utils.APIResponse, error) {
 		return nil, fmt.Errorf("no database connected, call ConnectDB first")
 	}
 	return c.RemoveTableWithID(c.DatabaseID, tableName)
+}
+
+// ExportDBOptions represents the options for exporting a database. These are defaults from the Cloudflare API
+type ExportDBOptions struct {
+	CurrentBookmark string `json:"current_bookmark,omitempty"`
+	DumpOptions     struct {
+		NoData   bool     `json:"no_data,omitempty"`
+		NoSchema bool     `json:"no_schema,omitempty"`
+		Tables   []string `json:"tables,omitempty"`
+	} `json:"dump_options,omitempty"`
+	OutputFormat string `json:"output_format"`
+}
+
+// ExportDB exports the database with the given options
+func (c *Client) ExportDB(databaseID string, options ExportDBOptions) (*utils.APIResponse, error) {
+	url := fmt.Sprintf("https://api.cloudflare.com/client/v4/accounts/%s/d1/database/%s/export", c.AccountID, databaseID)
+	body, err := json.Marshal(options)
+	if err != nil {
+		return nil, fmt.Errorf("failed to marshal export options: %w", err)
+	}
+	return utils.DoRequest("POST", url, string(body), c.APIToken)
+}
+
+// Export exports the connected database with the given options
+func (c *Client) Export(options ExportDBOptions) (*utils.APIResponse, error) {
+	if c.DatabaseID == "" {
+		return nil, fmt.Errorf("no database connected, call ConnectDB first")
+	}
+	return c.ExportDB(c.DatabaseID, options)
 }
